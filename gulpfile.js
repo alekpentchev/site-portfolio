@@ -49,7 +49,7 @@ gulp.task('autoprefixer' , function() {
         .pipe(gulp.dest('src/temp/css/'))
 })
 
-gulp.task('images', function() {
+gulp.task('images-min', function() {
     return gulp.src('src/img/**/*')
         .pipe(cache(imagemin()))
         .pipe(gulp.dest('dist/img'))
@@ -63,7 +63,7 @@ gulp.task('processhtml' , function() {
 })
 
 gulp.task('move-styles' , function() {
-    return gulp.src('src/temp/css/*.css')
+    return gulp.src('src/temp/css/style.css')
         .pipe(rename('style.min.css'))
         .pipe(gulp.dest('dist/css'))
 })
@@ -86,14 +86,14 @@ gulp.task('cache:clear', function() {
     return cache.clearAll()
 })
 
-gulp.task('watch', ['sass' , 'babel', 'browserSync'], function (){
-    gulp.watch('src/scss/*.scss', ['sass']);
+gulp.task('watch', ['sass-minify' , 'babel-uglify', 'browserSync'], function (){
+    gulp.watch('src/scss/*.scss', ['sass-minify']);
     gulp.watch('src/*.html', browserSync.reload); 
     gulp.watch('src/js/**/*.js', browserSync.reload); 
 })
 
 gulp.task('dist' , function() {
     runSequence(
-        'clean-dist', 'babel-uglify', 'sass-minify', 'autoprefixer', 'images', 'move-styles', 'move-scripts', 'processhtml', 'clean-temp'
+        'clean-dist', 'babel-uglify', 'sass-minify', 'autoprefixer', 'images-min', 'move-styles', 'move-scripts', 'processhtml', 'clean-temp'
     )
 })

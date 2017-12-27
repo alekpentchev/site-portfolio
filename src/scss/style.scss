@@ -1,3 +1,5 @@
+@import 'vars';
+
 /* General styles */
 html {
     scroll-behavior: smooth;
@@ -17,29 +19,18 @@ body {
     margin: 0;
     font-size: 16px;
     font-family: Raleway, sans-serif;
-    background: var(--whiteColor);
-    color: var(--primaryTextColor);
-
-    /*Variables*/
-    --time: 3s;
-    --softBackgroundColor: #ADE4DD;
-    --headerColor: #f4f7f5;
-    --highlightColor: #FFFF00;
-    --primaryTextColor: #374046;
-    --whiteColor: #FFF;
-    --blackColor: #000;
-    --boxShadowColor: #888888;
-    --gray11Color: #1c1c1c;
+    background: $whiteColor;
+    color: $primaryTextColor;
 }
 
 ::-moz-selection {
-    color: var(--primaryTextColor);
-    background: var(--highlightColor)
+    color: $primaryTextColor;
+    background: $highlightColor
 }
 
 ::selection {
-    color: var(--primaryTextColor);
-    background: var(--highlightColor)
+    color: $primaryTextColor;
+    background: $highlightColor
 }
 
 h2 {
@@ -50,7 +41,7 @@ h2 {
 h2::after {
     content: "";
     display:block;
-    border: 2px solid var(--highlightColor);
+    border: 2px solid $highlightColor;
     margin-top: 5px;
     width: 50px;
     margin-left: 33.33%;
@@ -64,7 +55,7 @@ a {
 /* Navbar section */
 
 nav, nav a, header {
-    color: var(--headerColor);
+    color: $headerColor;
 }
 
 nav{
@@ -96,15 +87,15 @@ nav li:not(last-child){
 
 nav a {
     text-decoration: none;
-    border-top: 0px solid var(--highlightColor);
-    border-bottom: 0px solid var(--highlightColor);
+    border-top: 0px solid $highlightColor;
+    border-bottom: 0px solid $highlightColor;
     transition: all 0.1s;
     padding: 3px 0;
 }
 
 nav a:hover {
-    border-top: 2px solid var(--highlightColor);
-    border-bottom: 2px solid var(--highlightColor);
+    border-top: 2px solid $highlightColor;
+    border-bottom: 2px solid $highlightColor;
 }
 
 /* Header section */
@@ -138,8 +129,8 @@ header h1 {
     text-align: center;
     display: inline-block;
     margin: 0;
-    animation: displayWord var(--time) infinite;
-    color: var(--highlightColor);
+    animation: displayWord $time infinite;
+    color: $highlightColor;
 }
 
 @keyframes displayWord {
@@ -187,19 +178,16 @@ header h1 {
     100%{opacity:1; padding-top: 0px;}
 }
 
-
-
 .about__description img {
     border-radius: 5px;
-    box-shadow: 3px 3px 5px var(--boxShadowColor);
+    box-shadow: 3px 3px 5px $boxShadowColor;
 }
-
 
 /* Skills section */
 
 .skills {
     min-height: 100vh;
-    background: var(--softBackgroundColor);
+    background: $softBackgroundColor;
     min-height: 100vh;
     display: flex;
     /* flex-direction: column; */
@@ -217,15 +205,79 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;
-    background: pink;
-    
+    width: 100%;    
 }
 
 .skills__grid {
+    width: 65%;
+    height: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-areas:
+        "js js ang vue"
+        "js js ang gulp"
+        "reg npm html css"
+        "sass sass html css";
+        box-shadow: 3px 3px 5px $boxShadowColor;
 }
 
+.skills__skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+
+    &:hover {
+        transform: scale(0.96);
+    }
+}
+
+.angular {
+    background: $angColor;
+    grid-area: ang;
+}
+
+.js {
+    background: $jsColor;
+    grid-area: js;
+}
+
+.vue {
+    background: $vueColor;
+    grid-area: vue;
+}
+
+.gulp {
+    background: $gulpColor;
+    grid-area: gulp;
+}
+
+.regex {
+    background: $regColor;
+    grid-area: reg;
+}
+
+.npm {
+    background: $npmColor;
+    grid-area: npm;
+}
+
+.html {
+    background: $htmlColor;
+    grid-area: html;
+}
+
+.css {
+    background: $cssColor;
+    grid-area: css;
+}
+
+.sass {
+    background: $cassColor;
+    grid-area: sass;
+}
