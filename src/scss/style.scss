@@ -5,7 +5,7 @@ html {
     scroll-behavior: smooth;
 }
 
-.elo {
+.test-gulp-sass {
     width: percentage(5/7)
 }
 
@@ -36,6 +36,8 @@ body {
 h2 {
     font-size: 2em;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h2::after {
@@ -44,7 +46,7 @@ h2::after {
     border: 2px solid $highlightColor;
     margin-top: 5px;
     width: 50px;
-    margin-left: 33.33%;
+    align-self:center;
     }
 
 a {
@@ -66,7 +68,7 @@ nav{
     flex-wrap: wrap;
     font-size: 1.7em;
     z-index: 999;
-    background-color: rgba(28,28,28, 0.5);
+    background-color: rgba(28,28,28, .85);
     position: absolute;
     width: 100%;
 }
@@ -102,16 +104,17 @@ nav a:hover {
 
 header {
     height: 100vh;
-    /* display: flex;
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    justify-content: center; */
+    justify-content: center;
     font-size: 2em;
 }
 
 header h1 {
     text-align: center;
-    padding-top: 25%;
+    margin-top: 25%;
+    padding: 25px 20px;
+    background-color: rgba(28,28,28, .85);
 }
 
 .header__img {
@@ -121,7 +124,6 @@ header h1 {
   height:100vh;
   width: 100%;
   object-fit: cover;
-  filter: blur(1px);
 }
 
 .header__span {
@@ -144,7 +146,7 @@ header h1 {
 /* About me section */
 
 .about {
-    margin-top: -30px;
+    //margin-top: -30px;
     min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
@@ -218,8 +220,8 @@ header h1 {
     grid-row-gap: 2px;
     grid-template-areas:
         "js js ang vue"
-        "js js ang gulp"
-        "reg npm html css"
+        "js js ang workflow"
+        "reg soft html css"
         "sass sass html css";
         box-shadow: 3px 3px 5px $boxShadowColor;
 }
@@ -237,6 +239,10 @@ header h1 {
     }
 }
 
+.sub__bottom {
+    padding-bottom: 20px;
+}
+
 .angular {
     background: $angColor;
     grid-area: ang;
@@ -252,9 +258,9 @@ header h1 {
     grid-area: vue;
 }
 
-.gulp {
+.workflow {
     background: $gulpColor;
-    grid-area: gulp;
+    grid-area: workflow;
 }
 
 .regex {
@@ -262,9 +268,9 @@ header h1 {
     grid-area: reg;
 }
 
-.npm {
+.soft {
     background: $npmColor;
-    grid-area: npm;
+    grid-area: soft;
 }
 
 .html {
@@ -278,6 +284,21 @@ header h1 {
 }
 
 .sass {
-    background: $cassColor;
+    background: $sassColor;
     grid-area: sass;
+}
+
+.tooltip {
+    text-align: left;
+    padding: 0 20px 0 0;
+}
+
+
+// Projects section
+.projects {
+    min-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }

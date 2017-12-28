@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alek Pentchev | Front-end Dev</title>
   <meta name="description" content="Front-end developer portfolio">
   <meta name="author" content="Alek Pentchev">
@@ -30,7 +31,7 @@
     </nav>
 
     <header>
-      <img src="img/hero-img/pexels-photo-325044.jpeg" alt="Hero image - fish in a pond" class="header__img">
+      <img src="img/hero-img/pexels-photo-213399.jpeg" alt="Hero image - fish in a pond" class="header__img">
       <h1>I create / <span class='header__span'>websites</span> / </h1>
     </header>
 
@@ -54,30 +55,124 @@
 
       <div class="grid__wrapper">
         <div class="skills__grid">
-          <div class="skills__skill js" title="<ul><li>I'm a tooltip!</li><li>I'm a tooltip!</li><li>I'm a tooltip!</li></ul>">js</div>
+          <div class="skills__skill js">js</div>
           <div class="skills__skill angular">angular</div>
           <div class="skills__skill vue">vue</div>
-          <div class="skills__skill gulp">gulp</div>
+          <div class="skills__skill workflow">workflow</div>
           <div class="skills__skill regex">regex</div>
-          <div class="skills__skill npm">npm</div>
+          <div class="skills__skill soft">soft</div>
           <div class="skills__skill html">html</div>
           <div class="skills__skill css">css</div>
           <div class="skills__skill sass">sass</div>
         </div>
       </div>
-      <span>* Click a skill to see more details</span>
-  
+      <span class="sub__bottom">* Click a skill to see more details (obviously not everything :))</span>
+
+      <div id="js-tooltip" class="tooltip">
+        <ul>
+          <li>ES6 (arrow fn, spread, async/await etc)</li>
+          <li>this keyword</li>
+          <li>scopes & closures</li>
+          <li>ajax</li>
+          <li>basics of functional programming</li>
+          <li>jQuery</li>
+          <li>JSON</li>
+        </ul>
+      </div>
+
+      <div id="vue-tooltip" class="tooltip">
+        <ul>
+          <li>DOM interaction</li>
+          <li>conditionals and rendering lists</li>
+          <li>vue instance</li>
+        </ul>
+      </div>
+
+      <div id="angular-tooltip" class="tooltip">
+        <ul>
+          <li>template syntax</li>
+          <li>data binding</li>
+          <li>directives</li>
+          <li>services & dependency injection</li>
+          <li>routing</li>
+          <li>angular-cli</li>
+        </ul>
+      </div>
+
+      <div id="workflow-tooltip" class="tooltip">
+        <ul>
+          <li>git</li>
+          <li>npm</li>
+          <li>gulp</li>
+          <li>parcel</li>
+          <li>babel</li>
+          <li>Jira</li>
+          <li>Confluence</li>
+        </ul>
+      </div>
+
+      <div id="html-tooltip" class="tooltip">
+        <ul>
+          <li>semantic elements</li>
+          <li>block & inline elements</li>
+          <li>forms & input types</li>
+          <li>accessibility</li>
+          <li>async & defer</li>
+        </ul>
+      </div>
+
+      <div id="css-tooltip" class="tooltip">
+        <ul>
+          <li>box object model</li>
+          <li>flexbox</li>
+          <li>css grid</li>
+          <li>pseudo-selectors & pseudo-classes</li>
+          <li>animations and transitions</li>
+          <li>rwd</li>
+          <li>relative sizing units</li>
+          <li>bootstrap</li>
+        </ul>
+      </div>
+
+      <div id="soft-tooltip" class="tooltip">
+        <ul>
+          <li>strong communication</li>
+          <li>teamwork</li>
+          <li>healthy passion</li>
+          <li>agile problem solving</li>
+        </ul>
+      </div>
+
+      <div id="regex-tooltip" class="tooltip">
+        <ul>
+          <li>grouping</li>
+          <li>character classes</li>
+          <li>quantifying & alternation</li>
+        </ul>
+      </div>
+
+      <div id="sass-tooltip" class="tooltip">
+        <ul>
+          <li>mixins</li>
+          <li>variables</li>
+          <li>nesting</li>
+          <li>extending & importing</li>
+        </ul>
+      </div>
     </section>
 
-    
+    <section id="projects" class="projects">
+      <h2>My projects</h2>
+
+    </section>
 
 
 
 
-    </div>
-    <script src="https://unpkg.com/tippy.js@2.0.8/dist/tippy.all.min.js"></script>
-    <!-- build:js js/script.min.js -->
-    <script src="temp/js/script.js"></script>
-    <!-- /build -->
+  </div>
+  <script src="https://unpkg.com/tippy.js@2.0.8/dist/tippy.all.min.js"></script>
+  <!-- build:js js/script.min.js -->
+  <script src="temp/js/script.js"></script>
+  <!-- /build -->
 </body>
 </html>

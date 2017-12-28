@@ -39,6 +39,16 @@ gulp.task('babel-uglify' , function(){
         }))
         .pipe(uglify())
         .pipe(gulp.dest('src/temp/js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
+gulp.task('watchHTML' , function(){
+    return gulp.src('src/*.html')
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 })
 
 gulp.task('autoprefixer' , function() {
@@ -87,9 +97,9 @@ gulp.task('cache:clear', function() {
 })
 
 gulp.task('watch', ['sass-minify' , 'babel-uglify', 'browserSync'], function (){
-    gulp.watch('src/scss/*.scss', ['sass-minify']);
-    gulp.watch('src/*.html', browserSync.reload); 
-    gulp.watch('src/js/**/*.js', browserSync.reload); 
+    gulp.watch("src/*.html" , ['watchHTML'])
+    gulp.watch('src/scss/*.scss', ['sass-minify'])
+    gulp.watch('src/js/**/*.js', ['babel-uglify'])
 })
 
 gulp.task('dist' , function() {
