@@ -23,7 +23,7 @@ gulp.task('browserSync' , function() {
 })
 
 gulp.task('sass-minify' , function () {
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/styles.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(cssnano())
         .pipe(gulp.dest('src/temp/css'))
@@ -52,7 +52,7 @@ gulp.task('watchHTML' , function(){
 })
 
 gulp.task('autoprefixer' , function() {
-    return gulp.src('src/temp/css/*.css')
+    return gulp.src('src/temp/css/styles.css')
         .pipe(autoprefixer({
             browsers: ['last 3 versions'],
         }))
@@ -73,8 +73,8 @@ gulp.task('processhtml' , function() {
 })
 
 gulp.task('move-styles' , function() {
-    return gulp.src('src/temp/css/style.css')
-        .pipe(rename('style.min.css'))
+    return gulp.src('src/temp/css/styles.css')
+        .pipe(rename('styles.min.css'))
         .pipe(gulp.dest('dist/css'))
 })
 

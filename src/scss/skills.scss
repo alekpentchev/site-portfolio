@@ -1,0 +1,107 @@
+/* Skills section */
+
+.skills {
+    min-height: 100vh;
+    background: $softBackgroundColor;
+    min-height: 100vh;
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.skills h2 {
+    height: 10vh;
+}
+
+.grid__wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;    
+}
+
+.skills__grid {
+    width: 65%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    grid-template-areas:
+        "js js ang vue"
+        "js js ang workflow"
+        "reg soft html css"
+        "sass sass html css";
+        box-shadow: 3px 3px 5px $boxShadowColor;
+}
+
+.skills__skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+
+    &:hover {
+        transform: scale(0.96);
+    }
+}
+
+.sub__bottom {
+    padding-bottom: 20px;
+}
+
+.angular {
+    background: $angColor;
+    grid-area: ang;
+}
+
+.js {
+    background: $jsColor;
+    grid-area: js;
+}
+
+.vue {
+    background: $vueColor;
+    grid-area: vue;
+}
+
+.workflow {
+    background: $gulpColor;
+    grid-area: workflow;
+}
+
+.regex {
+    background: $regColor;
+    grid-area: reg;
+}
+
+.soft {
+    background: $npmColor;
+    grid-area: soft;
+}
+
+.html {
+    background: $htmlColor;
+    grid-area: html;
+}
+
+.css {
+    background: $cssColor;
+    grid-area: css;
+}
+
+.sass {
+    background: $sassColor;
+    grid-area: sass;
+}
+
+.tooltip {
+    text-align: left;
+    padding: 0 20px 0 0;
+}

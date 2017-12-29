@@ -1,0 +1,41 @@
+/* About me section */
+.about {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-between;
+}
+
+.about__description {
+    width: 100vw;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 83px;
+}
+
+.about__description article {
+    width: 40%;
+    letter-spacing: 1px;
+    line-height: 150%;
+    margin-right: 40px;
+    text-align: justify;
+}
+
+.about__description article:target {
+    opacity: 0;
+    animation: textOpacity 0.5s ease-out;
+}
+
+@keyframes textOpacity {
+    0%{opacity: 0; padding-top: 200px;}
+    100%{opacity:1; padding-top: 0px;}
+}
+
+.about__description img {
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px $boxShadowColor;
+}

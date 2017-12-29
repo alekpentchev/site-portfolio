@@ -1,0 +1,54 @@
+/* General styles */
+html {
+    scroll-behavior: smooth;
+}
+
+.test-gulp-sass {
+    width: percentage(5/7)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-size: 16px;
+    font-family: Raleway, sans-serif;
+    background: $whiteColor;
+    color: $primaryTextColor;
+}
+
+::-moz-selection {
+    color: $primaryTextColor;
+    background: $highlightColor
+}
+
+::selection {
+    color: $primaryTextColor;
+    background: $highlightColor
+}
+
+h2, h3 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+h2::after, h3::after {
+    content: "";
+    display:block;
+    border: 2px solid $highlightColor;
+    margin-top: 5px;
+    width: 50px;
+    align-self:center;
+}
+
+a {
+    scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    text-decoration: none;
+    color: initial;
+}

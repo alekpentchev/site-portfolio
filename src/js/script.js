@@ -68,7 +68,7 @@ tippy(document.querySelector('.soft'), {
   trigger: 'click'
 })
 
-//regex tooltip
+//RegExp tooltip
 tippy(document.querySelector('.regex'), {
   html: document.querySelector('#regex-tooltip'),
   trigger: 'click'
@@ -79,3 +79,38 @@ tippy(document.querySelector('.sass'), {
   html: document.querySelector('#sass-tooltip'),
   trigger: 'click'
 })
+
+
+
+/*
+Contact form
+*/
+
+// function underlineFocuedEl(el , index) {
+//   el.addEventListener('focus' , () => {
+//     el.parentNode.classList.add('focus')
+//   })
+//   el.addEventListener('focusout' , () => {
+//     el.parentNode.classList.remove('focus')
+//   })
+// }
+// document.querySelectorAll('.text-input').forEach(underlineFocuedEl)
+
+
+//Send button - contact form
+document.querySelector('.submit').addEventListener('click' , () => {
+  let message = document.getElementById("message");
+  let name = document.getElementById("name");
+  let email = document.getElementById("email");
+  
+  if( name.checkValidity() && email.checkValidity()) {
+    let link = "mailto:innfea@gmail.com"
+      + "&subject=" + escape("Contact form message")
+      + "&body=" + escape(`Email: ${email.value}
+      Name: ${name.value}
+      Message: ${message.value}`);
+    window.location.href = link;
+  }
+});
+
+
