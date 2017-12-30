@@ -10,10 +10,11 @@
     width: 100vw;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card-container {
-    width: 100%;
+    //width: 100%;
     perspective: 900px;
     display: flex;
     flex-wrap: wrap;
