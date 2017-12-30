@@ -20,7 +20,7 @@ function rotateWord(index){
   },timeInterval)
 };
 
-window.addEventListener('DOMContentLoaded',rotateWord(0));
+window.onload = rotateWord(0);
 
 /*
 //Skills tooltips
