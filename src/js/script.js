@@ -94,11 +94,12 @@ document.querySelector('.submit').addEventListener('click' , () => {
   
   if( name.checkValidity() && email.checkValidity()) {
     let link = "mailto:innfea@gmail.com"
-      + "&subject=" + escape("Contact form message")
+      + "?subject=" + escape("Contact form message")
       + "&body=" + escape(`Email: ${email.value}
       Name: ${name.value}
       Message: ${message.value}`);
     window.location.href = link;
+    //window.open(link )
   }
 });
 
