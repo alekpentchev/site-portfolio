@@ -10,7 +10,7 @@ nav{
     justify-content: space-around;
     flex: 1;
     flex-wrap: wrap;
-    font-size: 1.7em;
+    font-size: 1.5em;
     z-index: 999;
     background-color: $textBackground;
     position: absolute;
@@ -42,6 +42,10 @@ nav a {
 nav a:hover {
     border-top: 2px solid $highlightColor;
     border-bottom: 2px solid $highlightColor;
+}
+
+.menu-desktop ul {
+    margin-left: 20px;
 }
 
 .menu-mobile {
@@ -142,6 +146,10 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     .menu-desktop {
         display: none;
+
+        span {
+            margin-top: 20px;
+        }
     }
 
     .menu-mobile {
