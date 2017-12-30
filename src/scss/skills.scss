@@ -1,14 +1,11 @@
 /* Skills section */
-
 .skills {
     min-height: 100vh;
     background: $softBackgroundColor;
     min-height: 100vh;
     display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .skills h2 {
@@ -17,10 +14,10 @@
 
 .grid__wrapper {
     height: 80vh;
+    width: 100%;    
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 100%;    
 }
 
 .skills__grid {
@@ -54,6 +51,7 @@
 
 .sub__bottom {
     padding-bottom: 20px;
+    text-align: center;
 }
 
 .angular {
@@ -104,4 +102,34 @@
 .tooltip {
     text-align: left;
     padding: 0 20px 0 0;
+}
+
+@media screen and (max-width: 630px) {
+    .skills__grid {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(5 , 1fr);
+        grid-template-areas: 
+        "js js js"
+        "ang ang vue"
+        "html html workflow"
+        "soft css css"
+        "sass sass reg";
+        width: 85%;
+    }
+    .skills__skill {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 683px) {
+    .skills .sub__bottom {
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .skills__skill {
+        font-size: 1rem;
+    }
+
 }

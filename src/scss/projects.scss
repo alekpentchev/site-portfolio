@@ -2,7 +2,6 @@
 .projects {
     min-height: 100vh;
     display: flex;
-    // flex-direction: column;    
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -19,6 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .card {
@@ -51,7 +51,8 @@
         
         hr {
             width: 50px;
-            border: 1px solid white;
+            background-color: $whiteColor;
+            border: 1px solid $whiteColor;
         }
     }
 
@@ -110,4 +111,16 @@
 
 .logo-github {
     height: 15px;
+}
+
+@media screen and (max-width:900px) {
+    .card, .card-front, .card-back{
+        width: 150px !important;
+        height: 200px !important;
+    }
+
+    .card .card-front div {
+        padding: 5px;
+        margin: 0 10px;
+    }
 }

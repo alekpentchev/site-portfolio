@@ -9,10 +9,10 @@
 .contact-wrapper {
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-form, .contact-det {
-    height: 80vh;
     width: 50%;
     display: flex;
     align-items: center;
@@ -32,29 +32,7 @@
     .field {
         position: relative;
         width: 100%;
-        // border-bottom: 1px solid rgba(28,28,28,.3);
-
-        // &:after {
-        //     content: '';
-        //     position: absolute;
-        //     bottom: 0;
-        //     left: 0;
-        //     width: 0%;
-        //     border-bottom: 1px solid $blackColor;
-        //     transition: width 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-        // }
     }
-
-    // .focus {
-    //     &:after {
-    //         content: '';
-    //         position: absolute;
-    //         bottom: 0;
-    //         left: 0;
-    //         width: 100%;
-    //         border-bottom: 1px solid black;
-    //     }
-    // }
 
     label {
         display: block;
@@ -93,5 +71,15 @@
             background-color: $vueColor;
             color: $whiteColor;
         }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contact-form, .contact-det {
+        width: 100%;
+    }
+
+    .contact-det {
+        margin-bottom: 20px;
     }
 }

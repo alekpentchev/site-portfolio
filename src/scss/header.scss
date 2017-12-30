@@ -10,9 +10,11 @@ header {
 
 header h1 {
     text-align: center;
-    margin-top: 25%;
     padding: 25px 20px;
     background-color: $textBackground;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .header__img {
@@ -25,7 +27,7 @@ header h1 {
 }
 
 .header__span {
-    width: 340px;
+    width: 380px;
     text-align: center;
     display: inline-block;
     margin: 0;
@@ -38,4 +40,26 @@ header h1 {
     40% { transform: translateY(0); opacity: 1 }
     60% { transform: translateY(0); opacity: 1 }
     100% { transform: translateY(-40px); opacity: 0 }
+}
+
+@media screen and (max-width: 950px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header__span {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    header h1 {
+        margin: 0 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .header__span {
+        width: 200px;
+    }
 }

@@ -86,17 +86,6 @@ tippy(document.querySelector('.sass'), {
 Contact form
 */
 
-// function underlineFocuedEl(el , index) {
-//   el.addEventListener('focus' , () => {
-//     el.parentNode.classList.add('focus')
-//   })
-//   el.addEventListener('focusout' , () => {
-//     el.parentNode.classList.remove('focus')
-//   })
-// }
-// document.querySelectorAll('.text-input').forEach(underlineFocuedEl)
-
-
 //Send button - contact form
 document.querySelector('.submit').addEventListener('click' , () => {
   let message = document.getElementById("message");
@@ -113,4 +102,8 @@ document.querySelector('.submit').addEventListener('click' , () => {
   }
 });
 
-
+/*
+Footer
+*/
+let currentYear = (new Date()).getFullYear();
+document.querySelector('.current-year').innerHTML = currentYear;

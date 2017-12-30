@@ -17,10 +17,9 @@
 </head>
 <body>
   <div class="container">
-    <nav>
+    <nav class="menu-desktop" role="navigation">
         <span>Alek Pentchev | Front-end Dev</span>
         <ul>
-            <li><a href='#'>Home</a></li>
             <li><a href='#about'>About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href='#projects'>Projects</a></li>
@@ -28,9 +27,26 @@
         </ul>
     </nav>
 
-    <header>
+    <nav class="menu-mobile" role="navigation">
+      <div id="menuToggle">
+        <input type="checkbox">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu-mobile__ul">
+          <li><a href='#about'>About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href='#projects'>Projects</a></li>
+          <li><a href='#contact'>Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="header">
       <img src="img/pexels-photo-213399.jpeg" alt="Hero image - colourful fish in a pond" class="header__img">
-      <h1>I create / <span class='header__span'>websites</span> / </h1>
+      <h1><span>I create </span> <span class='header__span'>websites</span></h1>
     </header>
 
     <section class="about" id="about">
@@ -106,8 +122,8 @@
           <li>gulp</li>
           <li>parcel</li>
           <li>babel</li>
-          <li>Jira</li>
-          <li>Confluence</li>
+          <li>jira</li>
+          <li>confluence</li>
         </ul>
       </div>
 
@@ -229,10 +245,11 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Reach me out</h2>
+      <h2>Reach me out</h2>
       <div class="contact-wrapper">
         <div class="contact-form">
-          <h3>Send me an e-mail</h3>
+          <h3>Send me an email</h3>
+          <span>This form will open your email client</span>
           <form action="" class="form has-floated-label">
             <p class="field firstname required active">
               <label class="label required" for="name">Name</label>
@@ -252,7 +269,7 @@
           </form>
         </div>
         <div class="contact-det">
-          <h3>Or text me later</h3>
+          <h3>Or find me here</h3>
           <p>
             <span><strong>Email</strong>: </span>
             <span class="contact-link">innfea@gmail.com</span>
@@ -270,9 +287,16 @@
       </div>
     </section>
 
+    <footer>
+      <span>&copy; innfea Aleksander Pentchev, <span class="current-year"></span> </span>
+    </footer>
 
-
-
+    <!-- SVG Go to top -->
+    <a class="go-top" href="#header">
+      <svg class="top-svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.0" width="500px" height="600px" viewBox="-500, -600 ,1000, 1200">
+        <polygon style="stroke:none; fill:#000000;" points="100,600 100,-200  500,200 500,-100  0,-600  -500,-100 -500,200 -100,-200 -100,600 "/> <!-- arrow up -->
+      </svg>
+    </a>
   </div>
   <script src="https://unpkg.com/tippy.js@2.0.8/dist/tippy.all.min.js"></script>
   <!-- build:js js/script.min.js -->

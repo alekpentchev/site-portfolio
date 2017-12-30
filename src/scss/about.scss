@@ -39,3 +39,29 @@
     border-radius: 5px;
     box-shadow: 3px 3px 5px $boxShadowColor;
 }
+
+@media screen and (max-width: 768px) {
+    .about__description article {
+        width: 100%;
+    }
+
+    .about__description img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .about__description article {
+        width: 80%;
+        margin-right: 0;
+    }
+
+    .about__description img {
+        width: 200px;
+        margin-top: 20px;
+    }
+
+    .about__description {
+        margin-bottom: 30px;
+    }
+}

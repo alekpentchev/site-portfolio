@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: Raleway, sans-serif;
     background: $whiteColor;
     color: $primaryTextColor;
@@ -51,4 +51,23 @@ a {
     -moz-scroll-behavior: smooth;
     text-decoration: none;
     color: initial;
+}
+
+.go-top {
+    width: 40px;
+    height: 40px;
+    background: rgba(28,28,28,.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 2vw;
+    right: 3vw;
+
+    .top-svg {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
 }
