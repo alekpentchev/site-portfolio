@@ -104,16 +104,25 @@
     padding: 0 20px 0 0;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 683px) {
+    .skills .sub__bottom {
+        margin-top: -40px;
+    }
+
+    .skills__skill {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
     .skills__grid {
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(5 , 1fr);
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4 , 1fr);
         grid-template-areas: 
-        "js js js"
-        "ang ang vue"
-        "html html workflow"
-        "soft css css"
-        "sass sass reg";
+        "js js ang ang "
+        "js js vue workflow"
+        "html html css css"
+        "soft sass sass reg";
         width: 85%;
     }
     .skills__skill {
@@ -121,13 +130,7 @@
     }
 }
 
-@media screen and (max-width: 683px) {
-    .skills .sub__bottom {
-        margin-top: -40px;
-    }
-}
-
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 410px) {
     .skills__skill {
         font-size: 1rem;
     }

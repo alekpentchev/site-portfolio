@@ -108,3 +108,16 @@ Footer
 */
 let currentYear = (new Date()).getFullYear();
 document.querySelector('.current-year').innerHTML = currentYear;
+
+
+// Show "go to top" arrow after five seconds
+let topArrow = document.querySelector('.go-top');
+
+document.addEventListener('scroll' , () => {
+  if (window.pageYOffset > 600) {
+    topArrow.style.display = 'block';
+  }
+  else {
+    topArrow.style.display = 'none';
+  }
+})
