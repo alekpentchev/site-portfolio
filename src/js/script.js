@@ -1,6 +1,6 @@
 'use strict'
 /* Rotating words function */
-let wordList = ['impression','usability','experience', 'websites'];
+let wordList = ['functionality','usability','performance', 'webapps'];
 const oneSecond = 1000;
 const timeInterval = 3 * oneSecond;
 
